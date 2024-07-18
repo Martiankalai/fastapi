@@ -17,5 +17,8 @@ async def root():
 
 @app.get("/sub")
 # query can be used to give and change value dynamically
-async def subpage(sub_page: int | None, query: int | None = None):
-    return new_dict.get(sub_page, query)
+async def subpage(sub_page: int | None, query: bool | None = None):
+    if query:
+        return "Yes"
+    else:
+        return new_dict.get(sub_page)
