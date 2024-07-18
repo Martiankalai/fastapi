@@ -32,7 +32,7 @@ async def kalai():
 
 
 @app.post('/sub')
-async def subPage(sub: SubPage):
+async def subPage(sub: SubPage):  # sub-object and SubPage - class
     if new_dict.get(sub.page_no):
         new_dict[sub.page_no] = sub
         return "subpage updated"
